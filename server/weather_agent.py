@@ -40,7 +40,7 @@ class WeatherAgent:
         }
         
         try:
-            response = requests.get(self.base_url, params=params)
+            response = requests.get(self.base_url, params=params, timeout=10)  # Ajout d'un timeout de 10 secondes
             response.raise_for_status()  # Lever une exception pour les erreurs HTTP
             
             data = response.json()

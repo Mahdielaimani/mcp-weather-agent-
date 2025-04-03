@@ -1,42 +1,42 @@
-#  Weather Application with MCP
+# Morocco Weather Application with MCP
 
-A comprehensive weather application for Moroccan cities using the Model Context Protocol (MCP) architecture. This project demonstrates how to build a client-server application that leverages the MCP protocol to provide weather information through a standardized interface.
+Une application météo complète pour les villes marocaines utilisant l'architecture Model Context Protocol (MCP). Ce projet démontre comment construire une application client-serveur qui exploite le protocole MCP pour fournir des informations météorologiques via une interface standardisée.
+
+## Qu'est-ce que MCP?
+
+Le Model Context Protocol (MCP) est un protocole standardisé pour la communication entre les modèles d'IA et les outils ou services externes. Il permet:
+
+- **Communication standardisée**: Interface cohérente pour que les modèles interagissent avec des outils externes
+- **Découverte d'outils**: Découverte dynamique des outils disponibles et de leurs capacités
+- **Échange de données structuré**: Format de communication basé sur JSON-RPC bien défini
+- **Extensibilité**: Ajout facile de nouveaux outils sans modifier l'implémentation du client
+
+## Fonctionnalités
+
+- **Données météo en temps réel**: Obtenez les conditions météorologiques actuelles pour les villes marocaines
+- **Liste des villes**: Parcourez les villes marocaines disponibles
+- **Interface CLI interactive**: Interface en ligne de commande conviviale
+- **Gestion sécurisée des clés API**: Stockage des clés API basé sur des variables d'environnement
+- **Gestion des erreurs**: Gestion robuste des erreurs et retour d'information à l'utilisateur
+- **Architecture extensible**: Facilité d'ajout de nouveaux outils et fonctionnalités
 
 
+## Prérequis
 
-## Features
-
-- **Real-time Weather Data**: Get current weather conditions for Moroccan cities
-- **City Listing**: Browse available Moroccan cities
-- **Interactive CLI**: User-friendly command-line interface
-- **Secure API Key Management**: Environment-based API key storage
-- **Error Handling**: Robust error handling and user feedback
-- **Extensible Architecture**: Easy to add new tools and capabilities
-
-## Prerequisites
-
-- Python 3.7 or higher
-- Internet connection for API access
-- OpenWeatherMap API key (free tier available)
-- Basic knowledge of command-line interfaces
-
-
-### What is MCP?
-
-The Model Context Protocol (MCP) is a standardized protocol for communication between AI models and external tools or services. It enables:
-
-- **Standardized Communication**: Consistent interface for models to interact with external tools
-- **Tool Discovery**: Dynamic discovery of available tools and their capabilities
-- **Structured Data Exchange**: Well-defined JSON-RPC based communication format
-- **Extensibility**: Easy addition of new tools without changing the client implementati
+- Python 3.7 ou supérieur
+- Connexion Internet pour l'accès à l'API
+- Clé API OpenWeatherMap (niveau gratuit disponible)
+- Connaissance de base des interfaces en ligne de commande
 
 ## Installation
 
-### Step 1: Clone the Repository
+### Étape 1: Cloner le dépôt
 
 ```bash
 git clone https://github.com/yourusername/weather-mcp.git
 cd weather-mcp
 
 
-on
+
+###: Installer les dépendances
+pip install -r requirements.txt

@@ -21,11 +21,16 @@ class WeatherApp:
             return True
         except Exception as e:
             print(f"Erreur d'initialisation: {str(e)}")
+            print("\nImpossible d'initialiser l'application. Veuillez vérifier:")
+            print("1. Que le serveur MCP est en cours d'exécution (python server/mcp_server.py)")
+            print("2. Que l'URL du serveur est correcte")
+            print("3. Que la clé API OpenWeather est configurée dans le fichier .env")
             return False
     
     def get_weather(self, city):
         """Récupère et affiche les informations météo pour une ville"""
         try:
+            print(f"Récupération des données météo pour {city}...")
             weather_data = self.client.execute_tool("get_weather", {"city": city})
             return weather_data
         except Exception as e:
@@ -82,7 +87,10 @@ class WeatherApp:
     def run(self):
         """Exécute l'application météo interactive"""
         if not self.initialize():
-            print("Impossible d'initialiser l'application. Veuillez vérifier la connexion au serveur.")
+            print("\nImpossible d'initialiser l'application. Veuillez vérifier:")
+            print("1. Que le serveur MCP est en cours d'exécution (python server/mcp_server.py)")
+            print("2. Que l'URL du serveur est correcte")
+            print("3. Que la clé API OpenWeather est configurée dans le fichier .env")
             return
         
         while True:

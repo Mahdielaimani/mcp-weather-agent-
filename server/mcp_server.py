@@ -64,6 +64,7 @@ class MCPHandler(BaseHTTPRequestHandler):
         self.send_header('Access-Control-Allow-Origin', '*')
         self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
         self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+        self.send_header('Connection', 'close')  # Fermer la connexion après la réponse
         self.end_headers()
     
     def do_OPTIONS(self):
@@ -100,7 +101,7 @@ class MCPHandler(BaseHTTPRequestHandler):
         
         # Garder la connexion ouverte avec des pings périodiques
         try:
-            for _ in range(60):  # Maintenir la connexion pendant 60 secondes max
+            for _ in range(10):  # Réduit à 10 secondes max
                 time.sleep(1)
                 self.wfile.write(b': ping\n\n')  # Commentaire SSE pour garder la connexion active
                 self.wfile.flush()
